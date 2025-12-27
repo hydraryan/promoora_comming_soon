@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #050505;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Canvas Background */
+#bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* Main Content */
+.container {
+    z-index: 10;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.headline {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.headline em {
+    font-style: italic;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.subheadline {
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+    font-weight: 300;
+}
+
+/* Countdown Timer */
+.countdown-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.label-text {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-right: 1rem;
+    opacity: 0.9;
+    align-self: center;
+}
+
+.timer {
+    display: flex;
+    gap: 2rem;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-unit span:first-child {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.time-unit .label {
+    font-size: 0.875rem;
+    color: #a0a0a0;
+    margin-top: 0.5rem;
+    text-transform: lowercase;
+}
+
+/* Horizon Glow */
+.horizon-glow {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: 200px;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .headline {
+        font-size: 2.5rem;
+    }
+    
+    .countdown-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .label-text {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .timer {
+        gap: 1.5rem;
+    }
+
+    .time-unit span:first-child {
+        font-size: 2rem;
+    }
+}
