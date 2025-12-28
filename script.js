@@ -1,6 +1,7 @@
 // --- Countdown Logic ---
 function updateCountdown() {
-    const launchDate = new Date('March 6, 2026 00:00:00').getTime();
+    // Set to the end of March 6th (or start of March 7th) to include the launch day in the count
+    const launchDate = new Date('March 7, 2026 00:00:00').getTime();
     const now = new Date().getTime();
     const distance = launchDate - now;
 
